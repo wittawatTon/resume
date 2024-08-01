@@ -5,65 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wittawat Na Ranong - IT Professional</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+    }
+    body {
+      display: block;
+      line-height: 1.1;
       margin: 0;
       padding: 0;
+      min-width: 150px;
       background-color: #f4f4f4;
       color: #333;
+      font-size: 1rem;
     }
     .container {
-      width: 80%;
-      margin: auto;
+      height: 100%;
       overflow: hidden;
     }
     header {
       background: #333;
-      color: #fff;
-      height: 10vh; /* 10% of the viewport height */
-      min-height: 70px; /* Ensures header doesn't shrink too much on very small screens */
-      border-bottom: #77aaff 3px solid;
-      position: fixed;
+      color: #ddd;
+      height: 10vh; 
+      min-height: 50px; 
+      border-bottom: #222 3px solid;
       width: 100%;
+      display: block;
+      align-items: center;
+      position: fixed;
       top: 0;
       z-index: 1000;
-      display: flex;
-      align-items: center;
-    }
-    header .container {
-      width: 90%;
     }
     header a {
-      color: #fff;
+      color: #ccc;
       text-decoration: none;
+      height: 100%;
       text-transform: uppercase;
-      font-size: 16px;
     }
     header ul {
       padding: 0;
+      padding-top: 3px;
       list-style: none;
       margin: 0;
     }
     header ul li {
       display: inline;
-      padding: 0 20px;
+      padding: 0 3px;
     }
+
+    header ul li a:hover {
+      color: #77aaff;
+    }
+
     header #branding {
       float: left;
     }
     header #branding h1 {
+      padding-top: 5px;
       margin: 0;
+      font-size: 1.6rem;
     }
     header nav {
       float: right;
-      margin-top: 0; /* Align with header height */
+      margin-top: 0; 
+      text-shadow: #fff;
+      font-size: 0.7rem;
     }
-    .profile, .experience, .education, .skills, .certifications {
+
+    .main_content{
+      height: 85vh;
+      padding-top: 10vh;
+    }
+
+    section{
+      padding-top: 10vh;
       background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
+      margin-top: 0;
+      overflow:auto;
     }
     .profile img {
       display: block;
@@ -73,14 +93,15 @@
     }
     .certifications img {
       vertical-align: middle;
-      margin-right: 10px;
+      max-width: 80px;
+      margin-right: 5px;
     }
     footer {
       background: #333;
       color: #fff;
       text-align: center;
-      height: 10vh; /* 10% of the viewport height */
-      min-height: 50px; /* Ensures footer doesn't shrink too much on very small screens */
+      height: 5vh; 
+      min-height: 30px; 
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -101,10 +122,64 @@
     footer .social-icons a:hover {
       color: #77aaff;
     }
-    .content {
-      padding-top: 15vh; /* Padding adjusted for fixed header height */
-      padding-bottom: 15vh; /* Padding adjusted for fixed footer height */
+    .phone-number {
+      font-size: 0.6em;
     }
+
+
+    @media only screen and (max-width: 380px) {
+
+    body {
+      font-size: 0.8rem;
+    }
+    header ul {
+     display: none;
+    }
+  }
+    
+    
+    @media only screen and (max-width: 285px) {
+
+      body {
+        font-size: 0.6rem;
+      }
+      header #branding h1 {
+      font-size: 1rem;
+    }
+
+      header ul {
+        display: none;
+      }
+
+      .phone-number {
+        display: none;
+      } 
+      footer .social-icons a {
+      font-size: 15px;
+    }
+    }
+
+    @media only screen and (max-width: 175px) {
+
+      body {
+        font-size: 0.6rem;
+      }
+      header #branding h1 {
+      font-size: 0.8rem;
+      }
+
+      header ul {
+        display: none;
+      }
+
+      .phone-number {
+        display: none;
+      } 
+      footer .social-icons a {
+      font-size: 10px;
+      }
+      }
+
   </style>
 </head>
 <body>
@@ -125,7 +200,7 @@
     </div>
   </header>
 
-  <div class="content container">
+  <div class="main_content">
     <section id="profile" class="profile">
       <h2>Professional Summary</h2>
       <img src="profile.jpg" alt="Wittawat Na Ranong">
@@ -243,8 +318,17 @@
     <div class="social-icons">
       <a href="https://github.com/wittawatTon" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/wittawat-%E0%B8%93-%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%AD%E0%B8%87-801722315/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:wittawat.naranong@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+66850836080" target="_blank"><i class="fas fa-phone"></i> <span  class="phone-number">+66 85-083-6080</span></a>
     </div>
-    <p>Wittawat Na Ranong - Email: <a href="mailto:wittawat.naranong@gmail.com">wittawat.naranong@gmail.com</a> - Phone: 085 083 6080</p>
   </footer>
+
+    <script>
+    $(document).ready(function() {
+      $('html, body').animate({
+        scrollTop: $('#profile').offset().top
+      }, 1000); // Adjust the duration as needed
+    });
+  </script>
 </body>
 </html>
