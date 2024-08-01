@@ -21,6 +21,12 @@
       color: #333;
       font-size: 1rem;
     }
+
+    .main_container{
+      width: 95%;
+      margin: 0 auto;
+    }
+
     .container {
       height: 100%;
       overflow: hidden;
@@ -31,13 +37,15 @@
       height: 10vh; 
       min-height: 50px; 
       border-bottom: #222 3px solid;
-      width: 100%;
       display: block;
       align-items: center;
       position: fixed;
       top: 0;
+      left: 2.5vw;
+      right: 2.5vw;
       z-index: 1000;
     }
+
     header a {
       color: #ccc;
       text-decoration: none;
@@ -47,6 +55,7 @@
     header ul {
       padding: 0;
       padding-top: 3px;
+      padding-right: 5px;
       list-style: none;
       margin: 0;
     }
@@ -64,6 +73,7 @@
     }
     header #branding h1 {
       padding-top: 5px;
+      padding-left: 5px;
       margin: 0;
       font-size: 1.6rem;
     }
@@ -91,6 +101,10 @@
       max-width: 150px;
       border-radius: 50%;
     }
+    p{
+      text-align: justify;
+      text-indent: 2em;
+    }
     .certifications img {
       vertical-align: middle;
       max-width: 80px;
@@ -104,7 +118,8 @@
       min-height: 30px; 
       position: fixed;
       bottom: 0;
-      width: 100%;
+      left:2.5vw;
+      right: 2.5vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -183,146 +198,147 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div id="branding">
-        <h1>Wittawat Na Ranong</h1>
+  <div class="main_container">
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Wittawat Na Ranong</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
+    </header>
+
+    <div class="main_content">
+      <section id="profile" class="profile">
+        <h2>Professional Summary</h2>
+        <img src="profile.jpg" alt="Wittawat Na Ranong">
+        <p>Experienced and results-driven IT Professional with 15 years of leadership in IT, specializing in security applications and infrastructure development. Committed to enhancing customer satisfaction through the delivery of innovative technical solutions. Proven track record in overseeing operations, maintenance, and support of complex systems. Recognized for developing creative business solutions and effectively managing technology and staff training initiatives.</p>
+      </section>
+
+      <section id="experience" class="experience">
+        <h2>Professional Experience</h2>
+        <h3>Thai British Security Printing PCL</h3>
+        <h4>IT Director (Jun 2019 - Jan 2021)</h4>
         <ul>
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#certifications">Certifications</a></li>
+          <li>Led a team of 40+ IT professionals in supporting all aspects of IT operations, including infrastructure, applications, and cybersecurity.</li>
+          <li>Developed a subscription authentication service with a security label on a cloud-based platform.</li>
+          <li>Oversaw the successful migration of ERP/HR System, ensuring minimal disruption and enhanced functionality.</li>
+          <li>Collaborated with executive management to develop IT budgets, forecasts, and resource allocation plans, aligning IT strategy with business goals.</li>
         </ul>
-      </nav>
+
+        <h4>IT System Development Manager (Jun 2014 - May 2019)</h4>
+        <ul>
+          <li>Managed a team of 15 engineers and technicians responsible for software development.</li>
+          <li>Built and led a team to develop a financial smart card personalization program.</li>
+          <li>Developed an e-registration application using ID card, streamlining the registration process.</li>
+          <li>Developed a web application for security label manufacturing and streamlining the ordering system from contract manufacturers.</li>
+        </ul>
+
+        <h4>R&D Team Lead (Software Development) (Oct 2006 - May 2014)</h4>
+        <ul>
+          <li>Led the development of a contactless e-purse system integrated with a loyalty program, enhancing customer retention and transaction efficiency.</li>
+          <li>Developed an RFID warehouse solution, improving inventory management and operational efficiency.</li>
+        </ul>
+
+        <h3>Thai CRT Co., Ltd</h3>
+        <h4>R&D Engineer (Apr 1996 - Sep 2006)</h4>
+        <ul>
+          <li>Designed Cathode Ray Tubes (CRT) using finite element method.</li>
+          <li>Developed a photolithography mathematical model for CRT using MATLAB/MATHCAD.</li>
+          <li>Served as an R&D server administrator, ensuring smooth operation and maintenance of critical IT infrastructure.</li>
+        </ul>
+      </section>
+
+      <section id="education" class="education">
+        <h2>Education</h2>
+        <p>Bachelor's Degree in Electrical Engineering, Chiangmai University (1992-1996)</p>
+        <p>Bachelor's Degree in Economics, Sukhothai Thammathirat University (1997-2000)</p>
+      </section>
+
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>IT Strategy and Planning</li>
+          <li>Project Management</li>
+          <li>Team Leadership and Development</li>
+          <li>Object-Oriented Programming (C, Java)</li>
+          <li>SQL</li>
+          <li>Cryptography, Key Management, Hardware Security Module</li>
+        </ul>
+        <h2>English Language Proficiency</h2>
+        <p>TOEIC Score: 910 (Listening: 490, Reading: 420)</p>
+      </section>
+
+      <section id="certifications" class="certifications">
+        <h2>Licenses & Certifications</h2>
+        <div>
+          <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
+          <strong>Back End Development and APIs</strong> - freeCodeCamp<br>
+          Issued Jul 2024<br>
+          Credential ID: wittawat-bedaa<br>
+          <a href="#">Show credential</a><br>
+          Skills: Mongoose ODM, Express.js, MongoDB, npm
+        </div>
+        <div>
+          <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
+          <strong>Data Visualization</strong> - freeCodeCamp<br>
+          Issued Jul 2024<br>
+          Credential ID: wittawat-dv<br>
+          <a href="#">Show credential</a><br>
+          Skills: d3, Data Visualization
+        </div>
+        <div>
+          <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
+          <strong>Front End Development Libraries</strong> - freeCodeCamp<br>
+          Issued Jul 2024<br>
+          Credential ID: wittawat-fedl<br>
+          <a href="#">Show credential</a><br>
+          Skills: Redux.js, React.js, Front-End Development
+        </div>
+        <div>
+          <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
+          <strong>JavaScript Algorithms and Data Structures (Beta)</strong> - freeCodeCamp<br>
+          Issued Jul 2024<br>
+          Credential ID: fcc6adc8570-c861-4550-bc58-00bbda23ccc7-jaads<br>
+          <a href="#">Show credential</a><br>
+          Skills: JavaScript
+        </div>
+        <div>
+          <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
+          <strong>Relational Database</strong> - freeCodeCamp<br>
+          Issued Jul 2024<br>
+          Credential ID: wittawat-rd<br>
+          <a href="#">Show credential</a><br>
+          Skills: Git, Bash, PostgreSQL
+        </div>
+        <div>
+          <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
+          <strong>Responsive Web Design</strong> - freeCodeCamp<br>
+          Issued Jul 2024<br>
+          Credential ID: fcc6adc8570-c861-4550-bc58-00bbda23ccc7-rwd<br>
+          <a href="#">Show credential</a><br>
+          Skills: CSS, HTML5
+        </div>
+      </section>
     </div>
-  </header>
 
-  <div class="main_content">
-    <section id="profile" class="profile">
-      <h2>Professional Summary</h2>
-      <img src="profile.jpg" alt="Wittawat Na Ranong">
-      <p>Experienced and results-driven IT Professional with 15 years of leadership in IT, specializing in security applications and infrastructure development. Committed to enhancing customer satisfaction through the delivery of innovative technical solutions. Proven track record in overseeing operations, maintenance, and support of complex systems. Recognized for developing creative business solutions and effectively managing technology and staff training initiatives.</p>
-    </section>
-
-    <section id="experience" class="experience">
-      <h2>Professional Experience</h2>
-      <h3>Thai British Security Printing PCL</h3>
-      <h4>IT Director (Jun 2019 - Jan 2021)</h4>
-      <ul>
-        <li>Led a team of 40+ IT professionals in supporting all aspects of IT operations, including infrastructure, applications, and cybersecurity.</li>
-        <li>Developed a subscription authentication service with a security label on a cloud-based platform.</li>
-        <li>Oversaw the successful migration of ERP/HR System, ensuring minimal disruption and enhanced functionality.</li>
-        <li>Collaborated with executive management to develop IT budgets, forecasts, and resource allocation plans, aligning IT strategy with business goals.</li>
-      </ul>
-
-      <h4>IT System Development Manager (Jun 2014 - May 2019)</h4>
-      <ul>
-        <li>Managed a team of 15 engineers and technicians responsible for software development.</li>
-        <li>Built and led a team to develop a financial smart card personalization program.</li>
-        <li>Developed an e-registration application using ID card, streamlining the registration process.</li>
-        <li>Developed a web application for security label manufacturing and streamlining the ordering system from contract manufacturers.</li>
-      </ul>
-
-      <h4>R&D Team Lead (Software Development) (Oct 2006 - May 2014)</h4>
-      <ul>
-        <li>Led the development of a contactless e-purse system integrated with a loyalty program, enhancing customer retention and transaction efficiency.</li>
-        <li>Developed an RFID warehouse solution, improving inventory management and operational efficiency.</li>
-      </ul>
-
-      <h3>Thai CRT Co., Ltd</h3>
-      <h4>R&D Engineer (Apr 1996 - Sep 2006)</h4>
-      <ul>
-        <li>Designed Cathode Ray Tubes (CRT) using finite element method.</li>
-        <li>Developed a photolithography mathematical model for CRT using MATLAB/MATHCAD.</li>
-        <li>Served as an R&D server administrator, ensuring smooth operation and maintenance of critical IT infrastructure.</li>
-      </ul>
-    </section>
-
-    <section id="education" class="education">
-      <h2>Education</h2>
-      <p>Bachelor's Degree in Electrical Engineering, Chiangmai University (1992-1996)</p>
-      <p>Bachelor's Degree in Economics, Sukhothai Thammathirat University (1997-2000)</p>
-    </section>
-
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>IT Strategy and Planning</li>
-        <li>Project Management</li>
-        <li>Team Leadership and Development</li>
-        <li>Object-Oriented Programming (C, Java)</li>
-        <li>SQL</li>
-        <li>Cryptography, Key Management, Hardware Security Module</li>
-      </ul>
-      <h2>English Language Proficiency</h2>
-      <p>TOEIC Score: 910 (Listening: 490, Reading: 420)</p>
-    </section>
-
-    <section id="certifications" class="certifications">
-      <h2>Licenses & Certifications</h2>
-      <div>
-        <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
-        <strong>Back End Development and APIs</strong> - freeCodeCamp<br>
-        Issued Jul 2024<br>
-        Credential ID: wittawat-bedaa<br>
-        <a href="#">Show credential</a><br>
-        Skills: Mongoose ODM, Express.js, MongoDB, npm
+    <footer>
+      <div class="social-icons">
+        <a href="https://github.com/wittawatTon" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/wittawat-%E0%B8%93-%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%AD%E0%B8%87-801722315/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:wittawat.naranong@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+66850836080" target="_blank"><i class="fas fa-phone"></i> <span  class="phone-number">+66 85-083-6080</span></a>
       </div>
-      <div>
-        <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
-        <strong>Data Visualization</strong> - freeCodeCamp<br>
-        Issued Jul 2024<br>
-        Credential ID: wittawat-dv<br>
-        <a href="#">Show credential</a><br>
-        Skills: d3, Data Visualization
-      </div>
-      <div>
-        <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
-        <strong>Front End Development Libraries</strong> - freeCodeCamp<br>
-        Issued Jul 2024<br>
-        Credential ID: wittawat-fedl<br>
-        <a href="#">Show credential</a><br>
-        Skills: Redux.js, React.js, Front-End Development
-      </div>
-      <div>
-        <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
-        <strong>JavaScript Algorithms and Data Structures (Beta)</strong> - freeCodeCamp<br>
-        Issued Jul 2024<br>
-        Credential ID: fcc6adc8570-c861-4550-bc58-00bbda23ccc7-jaads<br>
-        <a href="#">Show credential</a><br>
-        Skills: JavaScript
-      </div>
-      <div>
-        <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
-        <strong>Relational Database</strong> - freeCodeCamp<br>
-        Issued Jul 2024<br>
-        Credential ID: wittawat-rd<br>
-        <a href="#">Show credential</a><br>
-        Skills: Git, Bash, PostgreSQL
-      </div>
-      <div>
-        <img src="https://www.freecodecamp.org/icons/icon-48x48.png" alt="freeCodeCamp logo">
-        <strong>Responsive Web Design</strong> - freeCodeCamp<br>
-        Issued Jul 2024<br>
-        Credential ID: fcc6adc8570-c861-4550-bc58-00bbda23ccc7-rwd<br>
-        <a href="#">Show credential</a><br>
-        Skills: CSS, HTML5
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <div class="social-icons">
-      <a href="https://github.com/wittawatTon" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/wittawat-%E0%B8%93-%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%AD%E0%B8%87-801722315/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:wittawat.naranong@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+66850836080" target="_blank"><i class="fas fa-phone"></i> <span  class="phone-number">+66 85-083-6080</span></a>
-    </div>
-  </footer>
-
+    </footer>
+  </div> 
     <script>
     $(document).ready(function() {
       $('html, body').animate({
